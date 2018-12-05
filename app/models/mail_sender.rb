@@ -1,2 +1,0 @@
-class MailSender < ApplicationRecord
-end
