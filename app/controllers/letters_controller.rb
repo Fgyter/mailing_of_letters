@@ -40,8 +40,11 @@ class LettersController < ApplicationController
 
   private
 
+  def 
+
   def set_letter
     @letter = Letter.find(params[:id])
+    redirect_to letters_path if @letter.nil?
   end
 
   def letter_params

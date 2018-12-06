@@ -38,7 +38,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
 gem 'slim'
-gem 'html2slim', '~> 0.2.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
