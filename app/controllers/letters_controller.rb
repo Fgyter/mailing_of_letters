@@ -1,6 +1,12 @@
 class LettersController < ApplicationController
   before_action :set_letter, only: [:show, :edit, :update, :destroy]
 
+  def page
+    if user_signed_in?
+      redirect_to letters_path
+    end
+  end
+
   def index
     @letters = Letter.all
   end

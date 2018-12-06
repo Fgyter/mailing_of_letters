@@ -1,0 +1,32 @@
+ru:
+  letters:
+    jumbotron:
+      hello: 'Здравствуй!'
+      control_letters: 'Контроль и распределение писем о вакансиях.'
+      sign_in_or_register: 'Войдите в систему или зарегистрируйтесь!'
+      registration: 'Регистрация'
+      login: 'Вход'
+    index:
+      user: 'Пользователь'
+      letter_website: 'Сайт письма'
+      email: 'Почта'
+      aasm_state: 'Статус письма'
+      date_creating: 'Время создания'
+      date_updating: 'Обновлено'
+      comments: 'Коменнтарий'
+    form:
+      comments: 'Коменнтарии к письму'
+      url_address: 'Адрес письма'
+      email: 'Почта'
+      create_letter: 'Создать письмо'
+    new:
+      enter_data: 'Заполните данные'
+  layouts:
+    navigation:
+      logout: 'Выход'
+      search: 'Поиск'
+      entry_field: 'Поле ввода'
+      new_letter: 'Новое письмо'
+    application:
+      mail_sender: 'Почтовый отправитель'
+

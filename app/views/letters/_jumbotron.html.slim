@@ -1,0 +1,14 @@
+- if user_signed_in?
+- else
+  .container-main_screen
+    .jumbotron.jumbotron-form
+      h1.display-4
+        = t('.hello')
+      p.lead
+        = t('.control_letters')
+      hr.my-4
+      p
+        = t('.sign_in_or_register')
+      p.lead
+        = link_to t('.registration'), new_user_registration_path, class: "btn btn-dark"
+        = link_to t('.login'), new_user_session_path, class: "btn btn-dark"

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :letters
   devise_for :users
-  root 'letters#index'
+  root 'letters#page'
 end

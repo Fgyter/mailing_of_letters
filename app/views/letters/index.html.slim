@@ -1,0 +1,33 @@
+- @letters.each do |letter|
+  table.table
+    thead.thead-dark
+      tr
+        th scope="col"
+        th scope="col"
+          = t('.user')
+        th scope="col"
+          = t('.letter_website')
+        th scope="col"
+          = t ('.email')
+        th scope="col"
+          = t ('.aasm_state')
+        th scope="col"
+          = t ('.date_creating')
+        th scope="col"
+          = t ('.date_updating')
+        th scope="col"
+          = t ('.comments')
+    tbody
+      tr
+        th scope="row"
+        td 1
+        td.url_address_letter
+          = letter.url_address
+        td.email_letter
+          = letter.email
+        td 4
+        td 5
+        td 6
+        td.comment_letter
+          = letter.comment
+      tr
