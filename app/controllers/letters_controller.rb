@@ -18,7 +18,7 @@ class LettersController < ApplicationController
   def create
     @letter = Letter.new(letter_params)
     if @letter.save
-      redirect_to @letter       
+      redirect_to @letter
     else
       render :new
     end
@@ -28,13 +28,13 @@ class LettersController < ApplicationController
     if @letter.update(letter_params)
       redirect_to @letter
     else
-			render :edit
+      render :edit
     end
   end
 
   def destroy
     if @letter.destroy
-			redirect_to letters_path
+      redirect_to letters_path
     end
   end
 
