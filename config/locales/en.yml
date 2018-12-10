@@ -1,33 +1,25 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  letters:
+    jumbotron:
+      hello: 'Hello!'
+      control_letters: 'Сontrol and distribution of job offer letters.'
+      sign_in_or_register: 'Sign in or register!'
+      registration: 'Sign up'
+      login: 'Sign in'
+    index:
+      user: 'User'
+      letter_website: 'Letter website'
+      email: 'Email'
+      aasm_state: 'States'
+      date_creating: 'Date creating'
+      date_updating: 'Date updating'
+      comments: 'Comments'
+  layouts:
+    navigation:
+      logout: 'Logout'
+      search: 'Search'
+      entry_field: 'Entry field'
+      mail_sender: 'Mail sender'
+    application:
+      mail_sender: 'Mail sender'
+

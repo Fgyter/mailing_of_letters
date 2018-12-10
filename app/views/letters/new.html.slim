@@ -1,0 +1,8 @@
+.card.jumbotron-form
+  .card-header
+    h2
+      = t('.enter_data')
+  .card-body
+    = render 'form'
+    .link
+      = link_to t('.back'), letters_path, class: "btn btn-light"
