@@ -1,33 +1,40 @@
-- @letters.each do |letter|
-  table.table
-    thead.thead-dark
-      tr
-        th scope="col"
-        th scope="col"
-          = t('.user')
-        th scope="col"
-          = t('.letter_website')
-        th scope="col"
-          = t ('.email')
-        th scope="col"
-          = t ('.aasm_state')
-        th scope="col"
-          = t ('.date_creating')
-        th scope="col"
-          = t ('.date_updating')
-        th scope="col"
-          = t ('.comments')
-    tbody
+table.table.table-bordered
+  thead.thead-dark
+    tr
+      th scope="col"
+      th scope="col"
+        = t('.user')
+      th scope="col"
+        = t('.letter_website')
+      th scope="col"
+        = t ('.email')
+      th scope="col"
+        = t ('.aasm_state')
+      th scope="col"
+        = t ('.date_creating')
+      th scope="col"
+        = t ('.date_updating')
+      th scope="col"
+        = t ('.comments')
+  tbody
+    - @letters.each do |letter|
       tr
         th scope="row"
-        td 1
-        td.url_address_letter
+          = letter.id
+        td
+          = letter.user_id
+        td
           = letter.url_address
-        td.email_letter
+        td
           = letter.email
-        td 4
-        td 5
-        td 6
-        td.comment_letter
+        td
+          = letter.aasm_state
+        td
+          = letter.created_at
+        td
+          = letter.updated_at
+        td
           = letter.comment
+        td
+          = link_to t('.to_open'), letter, method: :get
       tr

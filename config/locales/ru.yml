@@ -1,4 +1,7 @@
 ru:
+  time:
+    formats:
+      long: "%Y-%m-%d %H:%M:%S"
   letters:
     jumbotron:
       hello: 'Здравствуй!'
@@ -14,13 +17,18 @@ ru:
       date_creating: 'Время создания'
       date_updating: 'Обновлено'
       comments: 'Коменнтарий'
+      to_open: 'Открыть'
     form:
       comments: 'Коменнтарии к письму'
-      url_address: 'Адрес письма'
+      url_address: 'Url - адресс'
       email: 'Почта'
       create_letter: 'Создать письмо'
     new:
       enter_data: 'Заполните данные'
+    show:
+      back: 'Назад'
+      are_you_sure: 'Вы уверенны?'
+      delete: 'Удалить'
   layouts:
     navigation:
       logout: 'Выход'

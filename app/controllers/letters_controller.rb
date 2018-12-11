@@ -22,7 +22,7 @@ class LettersController < ApplicationController
   end
 
   def create
-    @letter = Letter.new(letter_params)
+    @letter = current_user.letters.build(letter_params)
     if @letter.save
       redirect_to @letter
     else
@@ -52,6 +52,6 @@ class LettersController < ApplicationController
   end
 
   def letter_params
-    params.require(:letter).permit(:url_address, :email, :comment, :user_id)
+    params.require(:letter).permit(:url_address, :email, :comment, :user_id, :aasm_state)
   end
 end
