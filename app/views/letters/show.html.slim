@@ -1,0 +1,12 @@
+.card.jumbotron-form
+  .card-header
+    ul.nav.nav-tabs.card-header-tabs
+      li.nav-item
+        a.nav-link.active href="#"  Active
+  .card-body
+    h5.card-title
+    p.card-text
+    .link_to_button
+      = link_to t('.back'), letters_path, class: "btn btn-light"
+      = link_to t('.delete'), letter_path, method: :delete, data: {confirm: t('.are_you_sure')}, class: "btn btn-light"
+
