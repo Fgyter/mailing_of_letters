@@ -1,0 +1,18 @@
+.container
+  .row.columns_sig
+    .col-md-2
+      p = t('.url_address')
+      = @letter.url_address
+    .col-md-2
+      p = t('.email')
+      = @letter.email
+    .col-md-3
+      p = t('.comments')
+      = @letter.comment
+    .col-md-5
+      p = t('.aasm_state')
+      = @letter.aasm_state
+      .row
+      = link_to t('.to_cancel'), to_cancel_letter_path(@letter), method: :post, class: "btn btn-light" if ['new', 'in_work'].include?(@letter.aasm_state)
+      = link_to t('.to_work'), to_work_letter_path(@letter), method: :post, class: "btn btn-light" if 'new'.include?(@letter.aasm_state)
+      = link_to t('.to_completed'), to_completed_letter_path(@letter), method: :post, class: "btn btn-light" if 'in_work'.include?(@letter.aasm_state)

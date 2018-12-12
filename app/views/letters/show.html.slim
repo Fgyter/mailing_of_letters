@@ -6,7 +6,7 @@
   .card-body
     h5.card-title
     p.card-text
-    .link_to_button
+      = render 'show_form'
+    .link_to_button.modal-footer
       = link_to t('.back'), letters_path, class: "btn btn-light"
       = link_to t('.delete'), letter_path, method: :delete, data: {confirm: t('.are_you_sure')}, class: "btn btn-light"
-

@@ -1,5 +1,5 @@
 class LettersController < ApplicationController
-  before_action :set_letter, only: [:show, :edit, :update, :destroy]
+  before_action :set_letter, only: [:show, :edit, :update, :destroy, :to_cancel, :to_work, :to_completed]
 
   def page
     if user_signed_in?
@@ -8,7 +8,7 @@ class LettersController < ApplicationController
   end
 
   def index
-    @letters = Letter.all
+    @letters = current_user.letters.order(id: :desc)
   end
 
   def show
@@ -24,7 +24,7 @@ class LettersController < ApplicationController
   def create
     @letter = current_user.letters.build(letter_params)
     if @letter.save
-      redirect_to @letter
+      redirect_to letters_path
     else
       render :new
     end
@@ -42,6 +42,21 @@ class LettersController < ApplicationController
     if @letter.destroy
       redirect_to letters_path
     end
+  end
+
+  def to_cancel
+    @letter.to_cancel!
+    redirect_to @letter
+  end
+
+  def to_work
+    @letter.to_work!
+    redirect_to @letter
+  end
+
+  def to_completed
+    @letter.to_completed!
+    redirect_to @letter
   end
 
   private

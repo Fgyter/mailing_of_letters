@@ -29,6 +29,14 @@ ru:
       back: 'Назад'
       are_you_sure: 'Вы уверенны?'
       delete: 'Удалить'
+    show_form:
+      url_address: 'Url - адресс'
+      email: 'Почта'
+      comments: 'Коменнтарий'
+      aasm_state: 'Статус письма'
+      to_cancel: 'Отмена'
+      to_work: 'В работе'
+      to_completed: 'Завершено'
   layouts:
     navigation:
       logout: 'Выход'

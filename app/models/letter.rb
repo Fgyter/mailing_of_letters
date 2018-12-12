@@ -8,7 +8,7 @@ class Letter < ApplicationRecord
     state :in_work
     state :completed
 
-    event :to_canсel do
+    event :to_cancel do
       transitions from: [:new, :in_work], to: :canceled
     end
 
