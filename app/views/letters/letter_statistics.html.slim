@@ -1,0 +1,11 @@
+table.table.table-bordered
+  thead.thead-dark
+    tr
+      th scope="col"
+  tbody
+.container
+  h2 = t ('.statistics_last_half_year')
+  - @letters.map do |key,value|
+    .alert.alert-success
+      = key
+      = value

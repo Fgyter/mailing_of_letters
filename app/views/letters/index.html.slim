@@ -1,3 +1,5 @@
+= render 'filters'
+.js-search
 table.table.table-bordered
   thead.thead-dark
     tr
@@ -5,7 +7,7 @@ table.table.table-bordered
       th scope="col"
         = t('.user')
       th scope="col"
-        = t('.letter_website')
+        = t('.url_address')
       th scope="col"
         = t ('.email')
       th scope="col"
@@ -17,24 +19,23 @@ table.table.table-bordered
       th scope="col"
         = t ('.comments')
   tbody
-    - @letters.each do |letter|
+    = render partial: 'letter', collection: @letters
+
+h2 = t ('.statistics_month')
+table.table.table-bordered
+  thead.thead-dark
+    tr
+      th scope="col"
+        = t('.canceled')
+      th scope="col"
+        = t('.completed')
+      th scope="col"
+        = t('.in_work')
+      th scope="col"
+        = t('.new')
+    tr
+  tbody
+    - @letters_month.each do |key,value|
       tr
-        th scope="row"
-          = letter.id
         td
-          = letter.user.username
-        td
-          = letter.url_address
-        td
-          = letter.email
-        td
-          = letter.aasm_state
-        td
-          = letter.created_at
-        td
-          = letter.updated_at
-        td
-          = letter.comment
-        td
-          = link_to t('.to_open'), letter, method: :get
-      tr
+          = value

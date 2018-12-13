@@ -2,6 +2,9 @@ ru:
   time:
     formats:
       long: "%Y-%m-%d %H:%M:%S"
+      month_name: "%B"
+  record_already_exists: 'Запись уже существует'
+  you_can_create_an_entry: 'Вы можете создать запись'
   letters:
     jumbotron:
       hello: 'Здравствуй!'
@@ -11,13 +14,18 @@ ru:
       login: 'Вход'
     index:
       user: 'Пользователь'
-      letter_website: 'Сайт письма'
+      url_address: 'URL адрес'
       email: 'Почта'
       aasm_state: 'Статус письма'
       date_creating: 'Время создания'
       date_updating: 'Обновлено'
       comments: 'Коменнтарий'
       to_open: 'Открыть'
+      statistics_month: 'Cтатистика по текущему месяцу'
+      canceled: 'Отменнено'
+      completed: 'Завершенно'
+      in_work: 'В работе'
+      new: 'Новые'
     form:
       comments: 'Коменнтарии к письму'
       url_address: 'Url - адресс'
@@ -37,12 +45,19 @@ ru:
       to_cancel: 'Отмена'
       to_work: 'В работе'
       to_completed: 'Завершено'
+    filters:
+      filters: 'Фильтры'
+      check: 'Выбрать'
+      search_email: 'Поиск почты'
+      search: 'Поиск'
+    letter_statistics:
+      statistics_last_half_year: 'Статистика за 6 месяцев'
   layouts:
     navigation:
       logout: 'Выход'
-      search: 'Поиск'
       entry_field: 'Поле ввода'
       new_letter: 'Новое письмо'
+      statistics_last_half_year: 'Статистика за 6 месяцев'
+      list_letter: 'Список писем'
     application:
       mail_sender: 'Почтовый отправитель'
-

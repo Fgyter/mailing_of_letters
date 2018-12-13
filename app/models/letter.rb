@@ -1,6 +1,9 @@
 class Letter < ApplicationRecord
   belongs_to :user
 
+  scope :search_by_email, -> (e_mail) { where email: e_mail }
+  scope :last_half_year, -> { where('created_at > ?', Date.today.months_ago(6)) }
+
   include AASM
   aasm do
     state :new, initial: true
