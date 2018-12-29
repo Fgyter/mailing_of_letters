@@ -3,12 +3,18 @@
       button.navbar-toggler aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarTogglerDemo01" data-toggle="collapse" type="button"
         span.navbar-toggler-icon
       #navbarTogglerDemo01.collapse.navbar-collapse
-        ul.navbar-nav.mr-auto.mt-2.mt-lg-0
-          li.nav-item.active
+        ul.navbar-nav.mr-auto
+          li.nav-item
             = link_to t('.list_letter'), letters_path, class:'btn btn-secondary'
           li.nav-item
             = link_to t('.new_letter'), new_letter_path, class:'btn btn-secondary'
           li.nav-item
             = link_to t('.statistics_last_half_year'), letter_statistics_letters_path, method: :get, class:'btn btn-secondary'
+          li.
+            = form_tag(search_email_letters_path, method: :get, remote: true)
+              = label_tag(:q, t('.search_email'))
+              = text_field_tag(:q)
+          .search-email
         form.my-2.my-lg-0
           = link_to t('.logout'), destroy_user_session_path, method: :delete, class:'btn btn-secondary'
+

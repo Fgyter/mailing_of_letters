@@ -1,23 +1,20 @@
 = render 'filters'
-.js-search
 table.table.table-bordered
   thead.thead-dark
     tr
       th scope="col"
       th scope="col"
-        = t('.user')
+        = t ('.email')
       th scope="col"
         = t('.url_address')
-      th scope="col"
-        = t ('.email')
       th scope="col"
         = t ('.aasm_state')
       th scope="col"
         = t ('.date_creating')
       th scope="col"
-        = t ('.date_updating')
-      th scope="col"
         = t ('.comments')
+      th scope="col"
+        = t ('.view_letter')
   tbody
     = render partial: 'letter', collection: @letters
 

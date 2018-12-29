@@ -1,13 +1,7 @@
-= form_tag(letters_path, method: :get, class: 'filter-row') do
-  = date_field(:date, :start_date)
-  = date_field(:date, :end_date)
-  = select_tag :aasm_state, options_for_select(@letters.aasm.states)
-  .btn
-    = submit_tag t('.check')
-
-
-= form_tag(search_email_letters_path, method: :get, remote: true)
-  = label_tag(:q, t('.search_email'))
-  = text_field_tag(:q)
-  .btn
-    = submit_tag t('.search')
+.content.text-center.col-71
+  = form_tag(letters_path, method: :get, class: 'filter-row') do
+    = date_field(:date, :start_date)
+    = date_field(:date, :end_date)
+    = select_tag :aasm_state, options_for_select(@letters.aasm.states)
+    .btn
+      = submit_tag t('.check')

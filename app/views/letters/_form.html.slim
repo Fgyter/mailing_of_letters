@@ -1,10 +1,10 @@
 = form_for @letter do |f|
   .form-group
-  = f.label t('.url_address')
-  = f.text_field :url_address, class: "form-control"
-  .form-group
   = f.label t('.email')
   = f.email_field :email, class: "form-control"
+  .form-group
+  = f.label t('.url_address')
+  = f.text_field :url_address, class: "form-control"
   .form-group
   = f.label t('.comments')
   = f.text_area :comment, rows: 6, class: "form-control"
