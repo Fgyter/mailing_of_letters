@@ -5,6 +5,10 @@ Rails.application.routes.draw do
       post :to_work
       post :to_completed
     end
+    collection do
+      get :letter_statistics
+      get :search_email
+    end
   end
   devise_for :users
   root 'letters#page'

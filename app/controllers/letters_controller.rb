@@ -8,8 +8,21 @@ class LettersController < ApplicationController
   end
 
   def index
-    @letters = current_user.letters.order(id: :desc)
+    @letters = current_user.letters
+
+    dates = params[:date] || {}
+    @letters = @letters.where("created_at >= ?", dates[:start_date]) if dates[:start_date]
+    @letters = @letters.where("created_at <= ?", dates[:end_date]) if dates[:end_date]
+    @letters = @letters.where(aasm_state: params[:aasm_state]) if params[:aasm_state]
+
+    @letters_month = current_user.letters.where(created_at: Time.now.beginning_of_month..Time.now).group(:aasm_state).count
   end
+
+  def search_email
+    @letters = Letter.all.order(id: :desc)
+    @message = @letters.search_by_email(params[:q]).present? ? t(:record_already_exists) : t(:you_can_create_an_entry)
+  end
+
 
   def show
   end
@@ -57,6 +70,16 @@ class LettersController < ApplicationController
   def to_completed
     @letter.to_completed!
     redirect_to @letter
+  end
+
+  def letter_statistics
+    @letters = current_user.letters.last_half_year.order(:created_at).group_by { |q| q.created_at.strftime("%B") }
+    .map do |month, letters|
+      [
+        month, letters.group_by(&:aasm_state)
+          .map { |key, status| [key, status.count] }
+      ]
+    end
   end
 
   private
