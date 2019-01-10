@@ -4,6 +4,11 @@ class Letter < ApplicationRecord
   scope :search_by_email, -> (e_mail) { where email: e_mail }
   scope :last_half_year, -> { where('created_at > ?', Date.today.months_ago(6)) }
 
+  scope :state_new, -> { where(aasm_state: 'new') }
+  scope :state_canceled, -> { where(aasm_state: 'canceled') }
+  scope :state_in_work, -> { where(aasm_state: 'in_work') }
+  scope :state_completed, -> { where(aasm_state: 'completed') }
+
   include AASM
   aasm do
     state :new, initial: true

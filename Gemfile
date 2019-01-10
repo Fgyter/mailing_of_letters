@@ -41,6 +41,7 @@ gem 'slim'
 gem 'bootstrap'
 gem 'aasm', '~> 4.12'
 gem 'jquery-rails'
+gem 'activeadmin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
