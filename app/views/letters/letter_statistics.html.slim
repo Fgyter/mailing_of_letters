@@ -1,11 +1,8 @@
-table.table.table-bordered
-  thead.thead-dark
-    tr
-      th scope="col"
-  tbody
-.container
-  h2 = t ('.statistics_last_half_year')
-  - @letters.map do |key,value|
-    .alert.alert-success
-      = key
-      = value
+.row.m-2.justify-content-center
+- @letters.each do |month, letters|
+  .row.justify-content-center
+    .alert-success.text-center = month
+  - letters.each do |status, count|
+    .row.justify-content-center
+      .col-3.bg-light.text-right.col_stat #{t(status)} :
+      .col-3.bg-light.col_stat = count

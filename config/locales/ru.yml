@@ -26,6 +26,7 @@ ru:
       completed: 'Завершенно'
       in_work: 'В работе'
       new: 'Новые'
+      view_letter: 'Посмотреть письмо'
     form:
       comments: 'Коменнтарии к письму'
       url_address: 'Url - адресс'
@@ -48,15 +49,25 @@ ru:
     filters:
       filters: 'Фильтры'
       check: 'Выбрать'
-      search_email: 'Поиск почты'
-      search: 'Поиск'
     letter_statistics:
       statistics_last_half_year: 'Статистика за 6 месяцев'
+    filters:
+      filters: 'Фильтры'
+      search: 'Поиск'
+      check: 'Выбрать'
+    letter_statistics:
+      statistics_last_half_year: 'Статистика за 6 месяцев'
+    letter:
+      open: 'Открыть'
   layouts:
     navigation:
       logout: 'Выход'
       entry_field: 'Поле ввода'
       new_letter: 'Новое письмо'
+      statistics_last_half_year: 'Статистика за 6 месяцев'
+      list_letter: 'Список писем'
+      search_email: 'Поиск почты'
+      search: 'Поиск'
       statistics_last_half_year: 'Статистика за 6 месяцев'
       list_letter: 'Список писем'
     application:

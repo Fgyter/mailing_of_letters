@@ -2,18 +2,14 @@ tr
   th scope="row"
     = letter.id
   td
-    = letter.user.try(:username)
+    = letter.email
   td
     = letter.url_address
-  td
-    = letter.email
   td
     = letter.aasm_state
   td
     = letter.created_at
   td
-    = letter.updated_at
-  td
     = letter.comment
   td
-    = link_to t('.to_open'), letter, method: :get
+    = link_to t('.open'), letter, method: :get
