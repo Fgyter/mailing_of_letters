@@ -29,7 +29,7 @@ ru:
       view_letter: 'Посмотреть письмо'
     form:
       comments: 'Коменнтарии к письму'
-      url_address: 'Url - адресс'
+      url_address: 'Url - адрес'
       email: 'Почта'
       create_letter: 'Создать письмо'
     new:
